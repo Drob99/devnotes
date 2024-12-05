@@ -6,3 +6,4 @@ Below is my progress thus far.
 ### Dec 2024
 
 - started these note files.
+- started a Udemy course about Javascript.
