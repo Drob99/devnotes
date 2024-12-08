@@ -15,6 +15,7 @@
 - The best way to use regex is to use the help of ChatGPT. This is used in matching strings.
 
 ### Arrays
+
 - **push** adds element to the end
 - **pop** returns the value and removes it
 - **includes** returns whether element is in array or not
@@ -33,7 +34,43 @@
 - `delete key` deletes a key value pair from the dictionary
 - Dictionaries do not have an indexing system
 - Accessing keys that are not in dictionary will give you undefined.
-  
+- Accessing keys, values, or entries is possible using Object class.
+
 ## Scope, Closures, and Writing Modular code
 
+### Scope & Closure
+
+- Simply, a scope is the domain in which a variable is defined.
+- The global scope is the highest level.
+- Anything defined within a function, an if block, or a for loop is known as local scoping.
+- As a good tip, avoid naming variables with same names even if in different scopes.
+- A function could be assigned to a variable and that variable if invoked, acts exactly like the function.
+
+``` javascript
+function counter() {
+    let count = 0;
+    // anonymous function
+    return function () {
+        count++;
+        console.log(count);
+    }
+}
+let increment = counter(); // count = 0
+increment(); // count = 1
+```
+
+> In the above example, many things are worthy of note. Increment refers to the anonymous function and not the counter itself. Also, since the anonymous function is inside the counter and it took the value of count from it, it retains the value of count in what is known as closure. This is a very interesting phenomenon.
+
+### Writing Modular Code
+
+- Using `module.exports`, I can make functions accessible from outside.
+- The importing is as follows `const {addStrings} = require("./chapter-2")`.
+
 ## Error Handling and Debugging
+
+- The try catch block.
+- Printing using console.log
+- Printing err -> stack trace + error line
+- Printing err.message -> error line
+- console.error
+- Throw errors.
