@@ -2,7 +2,10 @@
 
 ## Table of Contents
 
-[Catalog Information] (#course-description)
+- [ICS 253 - Discrete Structures](#ics-253---discrete-structures)
+  - [Table of Contents](#table-of-contents)
+    - [Course Information](#course-information)
+    - [Brief Introduction](#brief-introduction)
 
 ### Course Information
 
