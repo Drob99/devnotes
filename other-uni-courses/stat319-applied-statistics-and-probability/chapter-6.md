@@ -8,9 +8,15 @@
       - [Data Types](#data-types)
       - [Objectives](#objectives)
     - [6.1: Numerical Summaries of Data](#61-numerical-summaries-of-data)
+      - [Percentiles \& Quartiles](#percentiles--quartiles)
     - [6.2: Stem-and-Leaf Diagrams](#62-stem-and-leaf-diagrams)
     - [6.3: Frequency Distributions and Histograms](#63-frequency-distributions-and-histograms)
       - [Frequency Table](#frequency-table)
+      - [Frequency Histogram](#frequency-histogram)
+      - [Frequency Polygon](#frequency-polygon)
+      - [Cumulative percentage polygon (Ogive)](#cumulative-percentage-polygon-ogive)
+      - [Pareto Chart (Vital Few)](#pareto-chart-vital-few)
+    - [6.4: Box Plots](#64-box-plots)
 
 ---
 
@@ -30,6 +36,7 @@
   - central tendency (center position in data set, like average)
   - variation (amount of spread in the values, like standard deviation)
   - shape (pattern of distribution of values from lowest to highest)
+- In examples, usually assume you are dealing with a sample unless stated otherwise.
 
 #### Data Types
 
@@ -49,6 +56,49 @@
 8. Know how to construct and interpret scatter diagrams of two or more variables.
 
 ### 6.1: Numerical Summaries of Data
+
+- To describe quantitative data, we can use the following measures:
+  - Measures of central tendency (mean, median, and mode)
+    - Mean
+      - most common
+      - $\mu$ for population, $\bar{x}$ for sample
+      - comprehensive
+      - heavily affected by outliers
+      - $$ \bar{x} = \frac{\sum_{i=1}^n x_i}{n} = \frac{x_1 + x_2 + \ldots + x_n}{n}$$
+      - **The sum of deviation from the mean is ZERO**
+    - Median
+      - $$ M_d = \begin{cases} x_{\left (\frac{n+1}{2} \right)} & \text{if } n \text{ is odd}, \\ \frac{1}{2} (x_{\left (\frac{n}{2} \right)} + \text{next}) & \text{if } n \text{ is even}\end{cases} $$
+      - Easy to calculate
+      - Does not use all info from data
+      - Not affected by outliers
+    - Mode
+      - Is a measure for numeric or categorical data
+      - The value(s) occurring the max number of times
+      - Not affected by outliers
+      - There may be no mode (if all are same)
+      - There may be several modes.
+  - Measures of variation (range, variation, IQR, and standard deviation)
+  - Measures of shape (skewness)
+    - Symmetric
+      - Spread uniformly
+      - Mean = Median = Mode
+    - Left-Skewed
+      - Mean < Median
+    - Right-Skewed
+      - Mean > Median
+
+#### Percentiles & Quartiles
+
+- If we talk about percentile $P_x$, we mean that $x$% of the data lie before and $100-x$% lie after.
+- If you scored in a test in the $95^\text{th}$ percentile, then you are among the top 5 % scorers.
+- The formulas to calculate the place (rank) of any percentile is found in the formula sheet of this course.
+- The minimum & max are not considered percentiles although R software considers them. In statistics, we have from $1^\text{st}$ to $99^\text{th}$ percentiles.
+- We might use interpolate to find the exact location.
+
+- They split the data into 4 segments with an equal number of values between.
+- $Q_1$ is the first quartile, where 25% of data lies before.
+- $Q_2$ is the second quartile, where 50% of data lies before.
+- $Q_3$ is the third quartile, where 75% of data lies before.
 
 ### 6.2: Stem-and-Leaf Diagrams
 
@@ -91,3 +141,51 @@ Below is an example from the book:
   - When comparing two or more groups with different sample sizes, you must use either a relative frequency or a percentage distribution.
 
 - If it is not clear, point number 4 basically means that it does not make any sense if I am comparing between two samples, where one has 100 and the other has 10 values, and I say that both have 2 values in a certain class. Obviously, 2/100 is NOT equivalent to 2/10. Hence, the use of relative frequency or percentage.
+- A classic freq table consists of the classes column and the frequency column. This does not mean that other columns, like midpoints or cumulative frequency, could be added.
+
+<img src="images/frequency-table.png" alt="Frequency Table" style="display: block; margin: 0 auto; width: 400px;"/>
+
+#### Frequency Histogram
+
+- Vertical bar chart of the data in a frequency distribution
+- There are no gaps between the bars.
+- The class boundaries or midpoints are shown on the horizontal axis.
+- Vertical axis is either frequency, relative frequency, or percentage.
+- We can know the approximate *center* of the data, indicate the degree of *variation*, and have an idea about the *shape*.
+- Steps:
+  1. Construct a grouped frequency distribution.
+  2. Draw the axes.
+  3. Put the end points pf each class on the x-axis and the frequencies on the y-axis.
+  4. Draw bars (without gaps) between each two endpoints.
+
+- The example below has the midpoints shown with 9 bins. It is actually the representation of the table above.
+
+<img src="images/frequency-histogram.png" alt="Frequency histogram" style="display: block; margin: 0 auto; width: 400px;"/>
+
+#### Frequency Polygon
+
+- We use midpoints and then connect the midpoints at their respective class percentages.
+- The polygon needs to be closed to have an area of 1.
+
+#### Cumulative percentage polygon (Ogive)
+
+- Displays the variable of interest versus the cumulative percentages.
+- Useful when there are 2 or more groups to compare
+
+#### Pareto Chart (Vital Few)
+
+- Rearrange the data in descending order and display both bar graphs and line graph.
+- We can know which groups accumulate or represent the largest portion of the data.
+
+> **All the previous graphs are used to organize numeric data.**
+
+### 6.4: Box Plots
+
+- A Five-Number summary: minimum, first quartile, median, third quartile, and the max
+- Can be used to detect outliers
+- Detects Skewness
+  - total length
+  - whisker length
+  - the box only
+- If the data values are between the inner & outer fences, they are **mild outliers** (1.5). If they are outside, they are **extreme outliers** (3).
+- The interquartile range (IQR) is the difference between the third and first quartile (length of the box).
