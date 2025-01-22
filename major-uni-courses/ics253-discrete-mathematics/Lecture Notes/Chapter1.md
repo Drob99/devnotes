@@ -14,6 +14,9 @@
     - [1.4 Logical Equivalence](#14-logical-equivalence)
       - [De Morgan's Laws](#de-morgans-laws)
     - [1.5 Laws of Propositional Logic](#15-laws-of-propositional-logic)
+    - [1.6 Predicates and Quantifiers](#16-predicates-and-quantifiers)
+    - [1.7 Quantified Statements](#17-quantified-statements)
+    - [1.8 De Morgan's law for quantified statements](#18-de-morgans-law-for-quantified-statements)
 
 ---
 
@@ -147,3 +150,47 @@ $(p \land q) \lor (\neg p \land r) = \text{False}$
 2. $\neg (p \land q) \ \ \equiv\ \  (\neg p \lor \neg q)$
 
 ### 1.5 Laws of Propositional Logic
+
+The following table contains all the major laws. Be sure to know them
+
+<img src="images/proposition-laws.png" alt="Table of Propositional Laws"  style="display: block; margin: 0 auto; width: 400px;" />
+
+### 1.6 Predicates and Quantifiers
+
+- **Predicate**: a logical statement with a truth value that is a function of one or more variables
+
+Examples:
+$$
+  \begin{equation}
+    Q(x, y): x^{2} = y
+  \end{equation}
+  \\
+  \begin{equation}
+    R(x, y, z): x + y = z
+  \end{equation}
+$$
+
+- When we substitute the variables with values, the predicate becomes a proposition.
+- The **domain** of a variable in a predicate is the set of all possible values for the variable.
+- Even if it has a truth value, as long as it contains a variable, it is still a predicate.
+- Another way to change a predicate into a proposition is to use quantifiers.
+- $\forall$ is a **universal quantifier**, and $\forall xP(x)$ is a **universally quantified statement**.
+
+$$
+\forall xP(x) = P(a_{1}) \land P(a_{2}) \land \ldots \land P(a_k)
+$$
+
+- A **counterexample** for a universally quantified statement is an element in the domain for which the predicate is false.
+- A $\exists$ is an **existential quantifier**, and $\exists xP(x)$ is an **existentially quantified statement**.
+- *Both the exists and the forall are propositions.*
+
+$$
+\exists xP(x) = P(a_{1}) \lor P(a_{2}) \lor \ldots \lor P(a_k)
+$$
+
+- An **example** for an existentially quantified statement is an element in the domain for which the predicate is true.
+- If the domain is empty, the exists is false and the forall is true.
+
+### 1.7 Quantified Statements
+
+### 1.8 De Morgan's law for quantified statements
