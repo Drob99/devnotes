@@ -64,10 +64,10 @@
       - $\mu$ for population, $\bar{x}$ for sample
       - comprehensive
       - heavily affected by outliers
-      - $$ \bar{x} = \frac{\sum_{i=1}^n x_i}{n} = \frac{x_1 + x_2 + \ldots + x_n}{n}$$
+      - $\bar{x} = \frac{\sum_{i=1}^n x_i}{n} = \frac{x_1 + x_2 + \ldots + x_n}{n}$
       - **The sum of deviation from the mean is ZERO**
     - Median
-      - $$ M_d = \begin{cases} x_{\left (\frac{n+1}{2} \right)} & \text{if } n \text{ is odd}, \\ \frac{1}{2} (x_{\left (\frac{n}{2} \right)} + \text{next}) & \text{if } n \text{ is even}\end{cases} $$
+      - $M_d = \begin{cases} x_{\left (\frac{n+1}{2} \right)} & \text{if } n \text{ is odd}, \\ \frac{1}{2} (x_{\left (\frac{n}{2} \right)} + \text{next}) & \text{if } n \text{ is even}\end{cases}$
       - Easy to calculate
       - Does not use all info from data
       - Not affected by outliers
