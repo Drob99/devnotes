@@ -37,6 +37,7 @@
   - variation (amount of spread in the values, like standard deviation)
   - shape (pattern of distribution of values from lowest to highest)
 - In examples, usually assume you are dealing with a sample unless stated otherwise.
+- A population that does not physically exist is called **conceptual** or **hypothetical**.
 
 #### Data Types
 
@@ -66,8 +67,9 @@
       - heavily affected by outliers
       - $\bar{x} = \frac{\sum_{i=1}^n x_i}{n} = \frac{x_1 + x_2 + \ldots + x_n}{n}$
       - **The sum of deviation from the mean is ZERO**
+      - This is the sample mean and is a reasonable estimate of the population mean.
     - Median
-      - $M_d = \begin{cases} x_{\left (\frac{n+1}{2} \right)} & \text{if } n \text{ is odd}, \\ \frac{1}{2} (x_{\left (\frac{n}{2} \right)} + \text{next}) & \text{if } n \text{ is even}\end{cases}$
+      - $\tilde{x} = \begin{cases} x_{\left (\frac{n+1}{2} \right)} & \text{if } n \text{ is odd}, \\ \frac{1}{2} (x_{\left (\frac{n}{2} \right)} + \text{next}) & \text{if } n \text{ is even}\end{cases}$
       - Easy to calculate
       - Does not use all info from data
       - Not affected by outliers
@@ -78,6 +80,35 @@
       - There may be no mode (if all are same)
       - There may be several modes.
   - Measures of variation (range, variation, IQR, and standard deviation)
+    - Range
+      - simplest
+      - difference between the largest and smallest values
+      - $Range = X_{largest} - X_{smallest}$
+      - Used in quality control where sample sizes of 4 or 5 are fairly common
+      - Disadvantages
+        - Ignores data distribution
+        - sensitive to outliers
+        - Misleading if at least 1 extreme values exist
+    - IQR
+      - The difference between the third and first quartiles
+      - Eliminates the outlier problem
+      - But sacrifices 50% of the data
+    - Variance
+      - Average of squared deviations of values from the mean
+      - The deviations are squared to change the negative ones to nonnegative and hence avoid the sum of ZERO.
+      - There is a difference in notation & formula between sample ($S$) and population ($\sigma$)
+      - $\sigma^2 = \frac{\sum_{i=1}^{N} (X_i - \mu)^2}{N} = \frac{\sum_{i=1}^{N} X_i^2 - N \mu^2}{N}$
+      - <img src="images/variance-proof.png" alt="variance proof" style="display: block; margin: 0 auto; width: 400px;"/>
+      - ${S}^2 = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n-1} = \frac{\sum_{i=1}^{n} x_i^2 - n \bar{x}^2}{n-1} = \frac{\sum_{i=1}^{n} x_i^2 - \frac{(\sum_{i=1}^{n} x_i)^2}{n}}{n-1}$
+      - Since we have a fewer number of points in the sample, observations tend to be closer to their means. Thus, we adjust it by using $n-1$ as the divisor.
+      - Since the deviations always sum up to zero, specifying the values of any $n-1$ automatically determines the remaining one. Thus only the $n-1$ deviations are being freely determined, hence **degrees of freedom**.
+      - Disadvantages
+        - Sensitive to outliers
+        - It has a squared unit of the data
+    - Standard deviation
+      - most common
+      - shows variation and has the same units as original data
+      - is simply the square root of the variance, with exactly same notation.
   - Measures of shape (skewness)
     - Symmetric
       - Spread uniformly
@@ -86,6 +117,10 @@
       - Mean < Median
     - Right-Skewed
       - Mean > Median
+
+> - The more the data is spread out, the greater the measures of variation.
+> - If all the values are the same, all the measures of variation will be zero (NO VARIATION)
+> - None of these values are ever zero of variation.
 
 #### Percentiles & Quartiles
 
@@ -125,6 +160,7 @@ Below is an example from the book:
 - used for organizing **numerical data numerically**
 - used for both continuous and discrete
 - Data is gathered into **bins**, each defined by **class intervals**.
+- Histograms are ideal for larger data sets, preferably 75 - 100 or above.
 
 #### Frequency Table
 
@@ -189,3 +225,4 @@ Below is an example from the book:
   - the box only
 - If the data values are between the inner & outer fences, they are **mild outliers** (1.5). If they are outside, they are **extreme outliers** (3).
 - The interquartile range (IQR) is the difference between the third and first quartile (length of the box).
+- **Note**: The whiskers extend to the last value that is NOT an outlier. Mild and extreme outliers are represented as points.
