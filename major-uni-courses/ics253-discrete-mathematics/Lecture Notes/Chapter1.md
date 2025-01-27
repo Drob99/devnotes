@@ -17,6 +17,7 @@
     - [1.6 Predicates and Quantifiers](#16-predicates-and-quantifiers)
     - [1.7 Quantified Statements](#17-quantified-statements)
     - [1.8 De Morgan's law for quantified statements](#18-de-morgans-law-for-quantified-statements)
+    - [1.9 Nested Quantifiers](#19-nested-quantifiers)
 
 ---
 
@@ -193,4 +194,29 @@ $$
 
 ### 1.7 Quantified Statements
 
+- Universally and existentially quantified statements could consist logical operations.
+- $\exists x(P(x) \land O(x))$ -> There exists an $x$ where $P(x)$ and $O(x)$ are both true.
+- Be aware of the parenthesis' placement after the quantifiers.
+- $P(x)$ -> **free variable** bcz variable can take any value in the domain
+- $\forall P(x)$ -> **bound variable** bcz variable is bound to quantifier
+- A statement with no free variables is a proposition since we can determine its truth value.
+
 ### 1.8 De Morgan's law for quantified statements
+
+$$
+Domain = {a_1, a_2, \ldots, a_n} \\
+\neg \forall P(x) \equiv \exists x \neg P(x) \\
+\neg (P(a_1) \land P(a_2) \land \ldots \land P(a_n)) = \neg P(a_1) \lor \neg P(a_2) \lor \ldots \lor \neg P(a_n)
+$$
+
+- For both quantified statements, you enter the negation inside and switch the quantifier symbol.
+
+### 1.9 Nested Quantifiers
+
+- If the predicate has more than one variable, each variable must be bound in order for it to be a proposition.
+- A logical expression with more than one quantifier that binds different variables in the same predicate has **nested quantifiers**.
+- Nesting could be of the same type ($\forall \forall$, $\exists \exists$) or could be alternating ($\forall \exists$, $\exists \forall$)
+
+<img src="images/nested-quantifiers.png" alt="Nested Quantifiers"  style="display: block; margin: 0 auto; width: 400px;"/>
+
+<img src="images/de-morgan-nested.png" alt="De Morgan Nested Quantifiers"  style="display: block; margin: 0 auto; width: 400px;"/>
