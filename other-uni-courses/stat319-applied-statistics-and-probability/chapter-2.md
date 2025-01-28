@@ -11,6 +11,8 @@
       - [Event Combinations](#event-combinations)
       - [Concepts](#concepts)
       - [Some properties](#some-properties)
+      - [Assessing Probabilities](#assessing-probabilities)
+  - [2.2 - 2.6 Axioms of Probability \& General Rules](#22---26-axioms-of-probability--general-rules)
 
 ## Objectives
 
@@ -73,3 +75,76 @@
 #### Some properties
 
 <img src="images/events-properties.png" alt="events properties" style="display: block; margin: 0 auto; width: 400px;"/>
+
+#### Assessing Probabilities
+
+There are three methods:
+
+   1. Priori (Classical Probability)
+      - The probability of an event $A$ is the sum of the probabilities of its individual outcomes.
+      - It is a general rule that applies in all cases.
+   2. Empirical Probability (Relative Frequency)
+      - Given that the events in the sample space are equally likely, the probability of a sample point is $\frac{1}{n}$ where $n$ is the number of outcomes.
+      - The probability of an event with $k$ possibilities is $\frac{k}{n}$
+   3. Subjective Probability
+      - Based on an individual's opinion, usually experts.
+      - usually considered, when no other options are provided.
+
+## 2.2 - 2.6 Axioms of Probability & General Rules
+
+In this chapter, we introduce probability for discrete sample spaces.
+
+1. Rules for Possible Values & Sum
+
+   a. **Axiom 1** Individual Values:
+      $0 <= P(e_i) <= 1$, for any event $e_i$
+   b. **Axiom 2** Sum of All
+      $\sum_{i=1}^{k} P(e_i) = 1$, $k$ is number of elementary events and $e_i$ is $i^{th}$ elementary event.
+
+2. Addition Rules for Elementary Events
+
+   If $A = {e_1, e_2, \ldots, e_m}$, then $P(A) = P(e_1) + P(e_2) + \ldots + P(e_m)$
+
+3. Complement Rule
+
+   $P(\bar{A}) = 1 - P(A)$
+
+4. Addition Rule for Two Events
+
+   $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+
+   Note that in case of mutually exclusive, the intersection part will be ZERO.
+
+5. De Morgan's Law
+
+   $P(A' \cap B') = P(A \cup B)' = 1 - P(A \cup B)$
+   $P(A' \cup B') = P(A \cap B)' = 1 - P(A \cap B)$
+
+6. Difference Rules
+
+   $P(A \cap B') = P(A) - P(A \cap B)$
+   $P(A' \cap B) = P(B) - P(A \cap B)$
+
+7. Conditional Probability
+
+   $P(A \mid B) = \frac{P(A \cap B)}{P(B)}$
+   $P(B \mid A) = \frac{P(A \cap B)}{P(A)}$
+
+8. Multiplication Rule
+
+   $P(A \cap B) = P(A \mid B) P(B) = P(B \mid A) P(A)$
+
+9. Independent Events
+
+   The events are independent if and only if their intersection's probability is the product of their individual probabilities.
+   $P(A \cap B) = P(A) P(B)$
+   Note that conditional probability formula could be used to prove independence.
+
+10. Addition Rule for Mutually Exclusive Events (**Axiom 3**)
+
+   $P(A \cup B) = P(A) + P(B)$
+11. If $A$ and $B$ are independent then the following are also independent
+
+   $\bar{A}$ and $B$
+   $\bar{B}$ and $A$
+   $\bar{A}$ and $\bar{B}$
