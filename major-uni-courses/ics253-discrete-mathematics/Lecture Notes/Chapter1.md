@@ -18,6 +18,10 @@
     - [1.7 Quantified Statements](#17-quantified-statements)
     - [1.8 De Morgan's law for quantified statements](#18-de-morgans-law-for-quantified-statements)
     - [1.9 Nested Quantifiers](#19-nested-quantifiers)
+    - [1.10: More Nested Quantified Statements](#110-more-nested-quantified-statements)
+      - [Using logic to express 'everyone else'](#using-logic-to-express-everyone-else)
+      - [Expressing uniqueness](#expressing-uniqueness)
+      - [Moving quantifiers in logical statements](#moving-quantifiers-in-logical-statements)
 
 ---
 
@@ -35,22 +39,22 @@
 
 #### Compound Propositions
 
-  1. **Conjunction**
-      - *logical operation*: $\land$
-      - *example*: $p \land q$ read as "$p$ and $q$"
-      - *explanation*: Only true when all operands are true.
-  2. **Disjunction (Inclusive Or)**
-      - *logical operation*: $\lor$
-      - *example*: $p \lor q$ read as "$p$ or $q$"
-      - *explanation*: Only false when all operands are false.
-  3. **Exclusive Or (XOR)**
-      - *logical operation*: $\oplus$
-      - *example*: $p \oplus q$ read as either "$p$ or $q$"
-      - *explanation*: Only true when an odd number of operands is true.
-  4. **Negation**
-      - *logical operation*: $\neg$
-      - *example*: $\neg\:p$ read as "not $p$"
-      - *explanation*: Flips the truth value of the variable after it.
+1. **Conjunction**
+   - *logical operation*: $\land$
+   - *example*: $p \land q$ read as "$p$ and $q$"
+   - *explanation*: Only true when all operands are true.
+2. **Disjunction (Inclusive Or)**
+   - *logical operation*: $\lor$
+   - *example*: $p \lor q$ read as "$p$ or $q$"
+   - *explanation*: Only false when all operands are false.
+3. **Exclusive Or (XOR)**
+   - *logical operation*: $\oplus$
+   - *example*: $p \oplus q$ read as either "$p$ or $q$"
+   - *explanation*: Only true when an odd number of operands is true.
+4. **Negation**
+   - *logical operation*: $\neg$
+   - *example*: $\neg\:p$ read as "not $p$"
+   - *explanation*: Flips the truth value of the variable after it.
 
 ---
 
@@ -77,7 +81,6 @@ Steps:
 Result:
 $(p \land q) \lor (\neg p \land r) = \text{False}$
 
-
 ### 1.3 Conditional Statements
 
 - The **conditional operation** is written as $\rightarrow$.
@@ -86,16 +89,20 @@ $(p \land q) \lor (\neg p \land r) = \text{False}$
 - A compound proposition that uses a conditional operation is a **conditional proposition**
 - $p$ is the **hypothesis** and $q$ is the **conclusion**.
 - Truth Table:
+
 <div align="center">
 
-| $p$ | $q$ | $p \rightarrow q$ |
-|:---:|:---:|:------------------:|
-| $\text{T}$ | $\text{T}$ | $\text{T}$ |
-| $\text{T}$ | $\text{F}$ | $\text{F}$ |
-| $\text{F}$ | $\text{T}$ | $\text{T}$ |
-| $\text{F}$ | $\text{F}$ | $\text{T}$ |
+|    $p$    |    $q$    | $p \rightarrow q$ |
+| :----------: | :----------: | :-----------------: |
+| $\text{T}$ | $\text{T}$ |    $\text{T}$    |
+| $\text{T}$ | $\text{F}$ |    $\text{F}$    |
+| $\text{F}$ | $\text{T}$ |    $\text{T}$    |
+| $\text{F}$ | $\text{F}$ |    $\text{T}$    |
 
 </div>
+- A tricky thing might be is that conditional statements are ALWAYS true when the hypothesis is false.
+
+
 - A tricky thing might be is that conditional statements are ALWAYS true when the hypothesis is false.
 
 <img src="images/conditional-image.png" alt="conditional statement illustrated"  style="display: block; margin: 0 auto; width: 400px;" />
@@ -123,12 +130,12 @@ $(p \land q) \lor (\neg p \land r) = \text{False}$
 
 <div align="center">
 
-| $p$ | $q$ | $p \leftrightarrow q$ |
-|:---:|:---:|:------------------:|
-| $\text{T}$ | $\text{T}$ | $\text{T}$ |
-| $\text{T}$ | $\text{F}$ | $\text{F}$ |
-| $\text{F}$ | $\text{T}$ | $\text{F}$ |
-| $\text{F}$ | $\text{F}$ | $\text{T}$ |
+|    $p$    |    $q$    | $p \leftrightarrow q$ |
+| :----------: | :----------: | :---------------------: |
+| $\text{T}$ | $\text{T}$ |      $\text{T}$      |
+| $\text{T}$ | $\text{F}$ |      $\text{F}$      |
+| $\text{F}$ | $\text{T}$ |      $\text{F}$      |
+| $\text{F}$ | $\text{F}$ |      $\text{T}$      |
 
 </div>
 
@@ -161,8 +168,9 @@ The following table contains all the major laws. Be sure to know them
 - **Predicate**: a logical statement with a truth value that is a function of one or more variables
 
 Examples:
+
 $$
-  \begin{equation}
+\begin{equation}
     Q(x, y): x^{2} = y
   \end{equation}
   \\
@@ -220,3 +228,19 @@ $$
 <img src="images/nested-quantifiers.png" alt="Nested Quantifiers"  style="display: block; margin: 0 auto; width: 400px;"/>
 
 <img src="images/de-morgan-nested.png" alt="De Morgan Nested Quantifiers"  style="display: block; margin: 0 auto; width: 400px;"/>
+
+### 1.10: More Nested Quantified Statements
+
+#### Using logic to express 'everyone else'
+
+<img src="images/nested-quantifiers-example-1.png alt="De Morgan Nested Quantifiers Example 1"  style="display: block; margin: 0 auto; width: 400px;"/>
+
+#### Expressing uniqueness
+
+$\exists x (L(x) \land \forall y ((x \mathrel{\char`≠} y) \to \neg L(y)))$
+
+#### Moving quantifiers in logical statements
+
+You can move a quantifier to the beginning as long as it does not pass another quantifier.
+
+For example, $\forall x (A(x) \rightarrow \exists y M(x, y))$ is logically equivalent to $\forall x \exists y (A(x) \rightarrow M(x, y))$
