@@ -143,8 +143,32 @@ In this chapter, we introduce probability for discrete sample spaces.
 10. Addition Rule for Mutually Exclusive Events (**Axiom 3**)
 
    $P(A \cup B) = P(A) + P(B)$
+
 11. If $A$ and $B$ are independent then the following are also independent
 
    $\bar{A}$ and $B$
    $\bar{B}$ and $A$
    $\bar{A}$ and $\bar{B}$
+
+12. If A, B, and C are three events, then
+
+   $P(A \cup B \cup C)$
+   $= P(A) + P(B) + P(C) - P(A \cap B) - P(A \cap C) - P(B \cap C) + P(A \cap B \cap C)$
+
+13. If $E_1, E_2, \ldots E_k$ are mutually exclusive events, then
+
+   $P(E_1 \cup E_2 \cup \ldots \cup E_k) = P(E_1) + P(E_2) + \dots + P(E_k) = \sum_{i=1}^k P(E_i)$
+
+14. If $E_1, E_2, \ldots E_k$ are independent events, then
+
+   $P(E_1 \cap E_2 \cap \ldots \cap E_k) = P(E_1) P(E_2) \dots P(E_k) = \prod_{i=1}^k P(E_i)$
+
+15. Marginal Probability for event B
+
+   $P(B)$
+   $= P(B \cap E_1) + P(B \cap E_2) + \ldots + P(B \cap E_k)$
+   $= P(B | E_1) P(E_1) + P(B | E_2) P(E_2) + \ldots + P(B | E_k) P(E_k)$
+   $= \sum_{i=1}^{k} P(B | E_i) P(E_i)$
+   where $E_1, E_2, \ldots E_k$ are mutually exclusive and collectively exhaustive (partitions)
+
+The probability of only one is the union minus the intersection (XOR). 
