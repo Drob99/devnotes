@@ -59,7 +59,7 @@ Both of these situations require a special type of classes. **Abstract Classes**
 
 Recall that the left side of this statement `Z z = new Z()` is called declaration, while the right side (using new) is the instantiation. If Z was an abstract class, the compiler would flag this as an error because of the instantiation part. Does this mean that we can declare some objects as abstract? *Yes, only in the case where the instantiation is another child class*.
 
-In UML, we show it as either *italics* or by writing **\<<static\>>** before or after the class name.
+In UML, we show it as either *italics* or by writing **\<<abstract\>>** before or after the class name.
 
 This concept is very important to understand and enforce. You just need to recognize that a class needs to be abstract when you encounter one.
 
