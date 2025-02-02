@@ -59,7 +59,7 @@ Both of these situations require a special type of classes. **Abstract Classes**
 
 Recall that the left side of this statement `Z z = new Z()` is called declaration, while the right side (using new) is the instantiation. If Z was an abstract class, the compiler would flag this as an error because of the instantiation part. Does this mean that we can declare some objects as abstract? *Yes, only in the case where the instantiation is another child class*.
 
-In UML, we show it as either *italics* or by writing **<<static>>** before or after the class name.
+In UML, we show it as either *italics* or by writing **\<<static\>>** before or after the class name.
 
 This concept is very important to understand and enforce. You just need to recognize that a class needs to be abstract when you encounter one.
 
@@ -70,8 +70,7 @@ There a couple of reasons. First, we can have multiple inheritance in interfaces
 
 To get the idea, let us take an example of the abstract class *Shape*. It has 3 children who inherit it: Line, Rectangle, and Circle. We can have an interface named *Printable* which implies that each one of them is a shape and a printable thing. It basically takes a functionality that is common to all and not really specific to shapes per se and puts it in an interface. Any printable thing even in other projects can still implement it.
 
-In our example, we will have two people working together: a designer let us name him Omar and a developer let us name him Sam. Sam tells Omar that Rectangles and Circles have areas and he wants a functionality that prints them. Omar, being the good designer he is, decides that having a function to calcArea is redundant. He wants to let such shapes that have areas 
-implement an interface called *Areable*.
+In our example, we will have two people working together: a designer --  let us name him Omar -- and a developer -- let us name him Sam. Sam tells Omar that Rectangles and Circles have areas and he wants a functionality that prints them. Omar, being the good designer he is, decides that having a function to calcArea is redundant. He wants to let such shapes that have areas implement an interface called *Areable*.
 
 The developer, hearing the news, writes the code below in App.java
 

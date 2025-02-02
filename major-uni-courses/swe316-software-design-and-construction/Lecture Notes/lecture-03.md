@@ -43,7 +43,7 @@
 - Instead of rewriting a new class from scratch, we base it on another existing class.
 - For example, a customer is also a person. A Customer class could inherit the Person instead of rewriting the common logic.
 - Inheritance takes all public and protected attributes and methods but NOT private.
-- The depth of inheritance refers to the number of parents a child has, or basically the number of arrows to the highest parent class in a class diagram. As an example, given the following inheritance sequence: Object <- Object <- Component <- Container <- Window <- Dialog <- FileDialog, the depth is 5.
+- The depth of inheritance refers to the number of parents a child has, or basically the number of arrows to the highest parent class in a class diagram. As an example, given the following inheritance sequence: Object <- Component <- Container <- Window <- Dialog <- FileDialog, the depth is 5.
 - To override properly, we must use same signature from parent and declare additional properties in child constructor.
 
 ### Polymorphism
@@ -85,5 +85,5 @@ for (Shape s : myShapes) {
 ```
 
 - A lot of if statements in your code is a sign of bad design.
-- It is NOT recommended to use 'instanceOf' extensively. It kills performance.
+- It is NOT recommended to use 'instanceof' extensively. It kills performance.
 - Most of the classes do not need it. It will come naturally. You just need to be aware.
