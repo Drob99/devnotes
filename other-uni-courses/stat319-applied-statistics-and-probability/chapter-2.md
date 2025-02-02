@@ -13,6 +13,7 @@
       - [Some properties](#some-properties)
       - [Assessing Probabilities](#assessing-probabilities)
   - [2.2 - 2.6 Axioms of Probability \& General Rules](#22---26-axioms-of-probability--general-rules)
+  - [2.7 Bayes' Theorem](#27-bayes-theorem)
 
 ## Objectives
 
@@ -171,4 +172,23 @@ In this chapter, we introduce probability for discrete sample spaces.
    $= \sum_{i=1}^{k} P(B | E_i) P(E_i)$
    where $E_1, E_2, \ldots E_k$ are mutually exclusive and collectively exhaustive (partitions)
 
-The probability of only one is the union minus the intersection (XOR). 
+The probability of only one is the union minus the intersection (XOR).
+
+Using a contingency table can simplify your work a lot in certain questions where 2 classes are present.
+
+Circuit questions are so common, so be careful about them.
+
+## 2.7 Bayes' Theorem
+
+It is used to revise previously calculated probabilities based on new information.
+Assume that a collection of sets $E_1, E_2, E_3, \ldots, E_k$ such that
+$E_i = i^{th}$ event of $k$ mutually exclusive and collectively exhaustive events.
+$B$ = new event that might impact $P(E_i)$
+
+So,
+$$
+B = (B \cap E_1) \cup (B \cap E_2) \cup \ldots \cup (B \cap E_k) \\
+P(B) = P(B \cap E_1) + P(B \cap E_2) + \ldots + P(B \cap E_k) \\
+= P(B | E_1) P(E_1) + P(B | E_2) P(E_2) + \ldots + P(B | E_k) P(E_k) = \sum^k_{i=1} P(B | E_i) P(E_i) \\
+P(E_j | B) = \frac{P(E_j \cap B)}{P(B)} = \frac{P(B | E_j) P(E_j)}{\sum^k_{i=1} P(B | E_i) P(E_i)}
+$$
