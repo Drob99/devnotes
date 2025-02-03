@@ -22,6 +22,9 @@
       - [Using logic to express 'everyone else'](#using-logic-to-express-everyone-else)
       - [Expressing uniqueness](#expressing-uniqueness)
       - [Moving quantifiers in logical statements](#moving-quantifiers-in-logical-statements)
+    - [1.11: Logical Reasoning](#111-logical-reasoning)
+    - [1.12: Rules of inference with propositions](#112-rules-of-inference-with-propositions)
+    - [1.13 Rules of Inference with Quantifiers](#113-rules-of-inference-with-quantifiers)
 
 ---
 
@@ -244,3 +247,59 @@ $\exists x (L(x) \land \forall y ((x \mathrel{\char`≠} y) \to \neg L(y)))$
 You can move a quantifier to the beginning as long as it does not pass another quantifier.
 
 For example, $\forall x (A(x) \rightarrow \exists y M(x, y))$ is logically equivalent to $\forall x \exists y (A(x) \rightarrow M(x, y))$
+
+### 1.11: Logical Reasoning
+
+An **argument** is a sequence of propositions, called **hypotheses**, followed by a final proposition, called **conclusion**.
+
+A **valid** argument is one where conclusion is true for every truth assignment to variables that cause the hypotheses to be true, otherwise it is **invalid**.
+
+$$
+h_1 \\
+h_2 \\
+\ldots \\
+h_{n} \\
+\therefore c
+$$
+
+This is valid whenever $( h_{1} \land h_{2} \land \ldots \land h_{n} )  \rightarrow c$ is a tautology.
+
+To use a truth table to establish the validity of an argument, a truth table is constructed for all the hypotheses and the conclusion. Each row in which all the hypotheses are true is examined.
+If the conclusion is true in each of the examined rows, then the argument is valid.
+If there is any row in which all the hypotheses are true but the conclusion is false, then the argument is invalid.
+
+*If the propositions are all never true, then the argument is valid.*
+
+We can change English arguments into an argument **form** to prove validity of an argument.
+
+### 1.12: Rules of inference with propositions
+
+<img src="images/rules-of-inference.png" alt="Rules of Inference"  style="display: block; margin: 0 auto; width: 400px;"/>
+
+The validity of an argument could be established by applying the rules of inference and laws of propositional logic in a **logical proof**.
+If proposition is a hypothesis, the justification is 'Hypothesis'.
+The proposition in the last step should be conclusion.
+
+The only way to master these questions is to practice more. There is no shortcut or tricks.
+
+### 1.13 Rules of Inference with Quantifiers
+
+To apply the inference rules to quantified expressions, the quantifier must be removed by plugging in a value from the domain to replace the variable.
+
+A value that can be plugged in for the variable is an **element**. It can also be introduced with a generic name in a proof.
+
+There are two types of named elements in logical proofs:
+
+- **arbitrary**: No special properties other those shared among all
+- **particular**: may have properties that are not shared by all elements
+
+Every domain element introduced must be defined on a separate line of proof.
+If element is defined in hypothesis, it is always a particular and definition is labeled 'Hypothesis'.
+If introduced for first time in proof, the definition is labeled 'Element definition' and must specify whether arbitrary or particular.
+
+**Existential Instantiation** and **Universal Instantiation** replace a quantified variable with an element of the domain.
+
+**Existential Generalization** and **Universal Generalization** replace an element of the domain with a quantified variable.
+
+<img src="images/rules-of-inference-for-quantified.png" alt="Rules of Inference For Quantified Statements"  style="display: block; margin: 0 auto; width: 400px;"/>
+
