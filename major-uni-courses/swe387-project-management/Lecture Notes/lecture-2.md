@@ -24,6 +24,15 @@
     - [Addressing problems, opportunities, and directives](#addressing-problems-opportunities-and-directives)
     - [Considering project time frame](#considering-project-time-frame)
     - [Considering project priority](#considering-project-priority)
+  - [Program Selection](#program-selection)
+    - [Focusing on Coordination and Benefits](#focusing-on-coordination-and-benefits)
+    - [Approaches to Creating Programs](#approaches-to-creating-programs)
+  - [Project Portfolio Selection](#project-portfolio-selection)
+    - [Focusing on Enterprise Success](#focusing-on-enterprise-success)
+    - [Sample Approach for Creating a Project Portfolio](#sample-approach-for-creating-a-project-portfolio)
+    - [Traditional Approach to Project Portfolio Management](#traditional-approach-to-project-portfolio-management)
+    - [Lean Project Portfolio Management](#lean-project-portfolio-management)
+  - [Chapter Summary](#chapter-summary)
 
 ## Objectives
 
@@ -198,3 +207,71 @@ Even if a project finishes very quickly, you need to consider other factors like
 Some just assign priorities and do projects from the highest to lowest priority.
 
 Of course, organizations usually use a combination of these methods.
+
+## Program Selection
+
+### Focusing on Coordination and Benefits
+
+Coordinating several projects could help save money and time.
+
+### Approaches to Creating Programs
+
+Some projects fall naturally into existing programs.
+Others might spark the need to create a new program.
+
+## Project Portfolio Selection
+
+These could be understood as areas of investment.
+The goal of portfolio management is to help maximize business value to ensure enterprise success.
+
+### Focusing on Enterprise Success
+
+Project managers strive to make their projects successful.
+Program managers focus on making their programs successful.
+Project portfolio managers focus on how ALL projects fit together to help the entire enterprise achieve success.
+
+### Sample Approach for Creating a Project Portfolio
+
+<img src="images/sample-project-portfolio.png" alt="events properties" style="display: block; margin: 0 auto; width: 400px;"/>
+
+### Traditional Approach to Project Portfolio Management
+
+Five Levels, from simplest to complex
+
+1. Put all of your projects in one list. You might find duplicate or unneeded.
+2. Prioritize the projects in the list to distribute resources properly.
+3. Divide your projects into several categories based on investment types.
+4. Automate the list. (Excel or other tools)
+5. Apply modern portfolio theory (risk-return tools)
+
+### Lean Project Portfolio Management
+
+**Lean** is a management approach that focuses on creating more value for customers by eliminating waste and optimizing processes.
+
+Focuses on
+
+1. Defining desired outcomes and asking teams to determine the work needed to produce those outcomes.
+2. Focusing more on value delivery than managing costs.
+3. Revisiting past decisions, plans, budgets, and finances at least every quarter.
+
+## Chapter Summary
+
+- An organization’s overall *business strategy* should guide the project selection process and management of those projects.
+- Many organizations perform a *SWOT analysis* to help identify potential projects based on their strengths, weaknesses, opportunities, and
+threats.
+- Many organizations follow a *traditional approach*, often completed in four stages. The four stages of this model, from highest to lowest, are strategic planning, business area analysis, project planning, and resource allocation.
+- To make more timely decisions, they can also use an *agile approach*. Instead of selecting and funding a specific project, you provide strategic directions and then fund teams and entrust them to figure out the best approaches to provide the most business value in the shortest amount of time. 
+- You can also use a combination of both approaches. 
+- It is important to understand the differences between product managers, program managers, and project managers as well as the purpose of product
+roadmaps and Gantt charts.
+- Product managers and product roadmaps focus on higher level strategy,while program managers, project managers, and Gantt charts focus on implementing strategies.
+- Several methods are available for selecting projects. Financial methods include calculating and analyzing the net present value, return on investment, and payback period for projects. You can also use a weighted scoring model; implement a balanced scorecard; address problems, opportunities, and directives; and consider project time frame and project priority to assist in project selection.
+- After determining what projects to pursue, it is important to
+decide if projects should be grouped into programs. The main criteria
+for program selection are the coordination and benefits available by
+grouping projects together into a program.
+- There is no simple process for deciding how to create project
+portfolios, but the goal of project portfolio management is to help
+maximize business value to ensure enterprise success.
+- There are five levels of complexity for a traditional approach to project portfolio management, ranging from simply putting all projects in one list to applying portfolio theory to analyze risks and returns of a project portfolio. 
+- Lean project portfolio management takes a different approach by defining desired outcomes for an organization, focusing on value, and revisiting past decisions at least every quarter.
