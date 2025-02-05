@@ -303,3 +303,7 @@ If introduced for first time in proof, the definition is labeled 'Element defini
 
 <img src="images/rules-of-inference-for-quantified.png" alt="Rules of Inference For Quantified Statements"  style="display: block; margin: 0 auto; width: 400px;"/>
 
+Be aware of mistakes in proofs.
+You should not assume that two variables introduced in the proof are the same unless there is a valid reason.
+
+To show that an argument is invalid, we need a value where the hypotheses are true but conclusion is false.
