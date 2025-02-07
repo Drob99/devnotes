@@ -164,7 +164,7 @@ In this chapter, we introduce probability for discrete sample spaces.
 
    $P(E_1 \cap E_2 \cap \ldots \cap E_k) = P(E_1) P(E_2) \dots P(E_k) = \prod_{i=1}^k P(E_i)$
 
-15. Marginal Probability for event B
+15. Marginal/ Total Probability for multiple events
 
    $P(B)$
    $= P(B \cap E_1) + P(B \cap E_2) + \ldots + P(B \cap E_k)$
@@ -172,11 +172,23 @@ In this chapter, we introduce probability for discrete sample spaces.
    $= \sum_{i=1}^{k} P(B | E_i) P(E_i)$
    where $E_1, E_2, \ldots E_k$ are mutually exclusive and collectively exhaustive (partitions)
 
+16. Total Probability Rule (for 2 events)
+
+   $P(B) = P(B \cap A) + P(B \cap A') = P(B | A) P(A) + P(B | A') P(A')$
+
 The probability of only one is the union minus the intersection (XOR).
 
 Using a contingency table can simplify your work a lot in certain questions where 2 classes are present.
 
 Circuit questions are so common, so be careful about them.
+
+If the question does not mention the selection type, then assume it is without replacement.
+
+Two events are **independent** if any of the following is true:
+
+   1. $P(A | B) = P(A)$
+   2. $P(B | A) = P(B)$
+   3. $P(A \cap B) = P(A) P(B)$
 
 ## 2.7 Bayes' Theorem
 
