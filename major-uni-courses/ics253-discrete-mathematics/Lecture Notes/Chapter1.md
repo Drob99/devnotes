@@ -44,15 +44,15 @@
 
 1. **Conjunction**
    - *logical operation*: $\land$
-   - *example*: $p \land q$ read as "$p$ and $q$"
+   - *example*: $p \land q$ read as " $p$ and $q$ "
    - *explanation*: Only true when all operands are true.
 2. **Disjunction (Inclusive Or)**
    - *logical operation*: $\lor$
-   - *example*: $p \lor q$ read as "$p$ or $q$"
+   - *example*: $p \lor q$ read as " $p$ or $q$ "
    - *explanation*: Only false when all operands are false.
 3. **Exclusive Or (XOR)**
    - *logical operation*: $\oplus$
-   - *example*: $p \oplus q$ read as either "$p$ or $q$"
+   - *example*: $p \oplus q$ read as either " $p$ or $q$ "
    - *explanation*: Only true when an odd number of operands is true.
 4. **Negation**
    - *logical operation*: $\neg$
@@ -64,7 +64,7 @@
 ### 1.2 Evaluating Compound Propositions
 
 - Order of operations: NAO (not, and, then or)
-- This section is mostly calculations, and could be easily checked for outside sources. Below, there is an easy example. If I find harder examples in the future, I will hopefully include them.
+- This section is mostly calculations, and could be easily checked from outside sources. Below, there is an easy example. If I find harder examples in the future, I will hopefully include them.
 
 #### Example
 
@@ -83,6 +83,8 @@ Steps:
 
 Result:
 $(p \land q) \lor (\neg p \land r) = \text{False}$
+
+---
 
 ### 1.3 Conditional Statements
 
@@ -103,8 +105,6 @@ $(p \land q) \lor (\neg p \land r) = \text{False}$
 | $\text{F}$ | $\text{F}$ |    $\text{T}$    |
 
 </div>
-- A tricky thing might be is that conditional statements are ALWAYS true when the hypothesis is false.
-
 
 - A tricky thing might be is that conditional statements are ALWAYS true when the hypothesis is false.
 
@@ -160,6 +160,8 @@ $(p \land q) \lor (\neg p \land r) = \text{False}$
 1. $\neg (p \lor q) \ \ \equiv\ \  (\neg p \land \neg q)$
 2. $\neg (p \land q) \ \ \equiv\ \  (\neg p \lor \neg q)$
 
+---
+
 ### 1.5 Laws of Propositional Logic
 
 The following table contains all the major laws. Be sure to know them
@@ -173,13 +175,9 @@ The following table contains all the major laws. Be sure to know them
 Examples:
 
 $$
-\begin{equation}
     Q(x, y): x^{2} = y
-  \end{equation}
   \\
-  \begin{equation}
     R(x, y, z): x + y = z
-  \end{equation}
 $$
 
 - When we substitute the variables with values, the predicate becomes a proposition.
@@ -215,12 +213,16 @@ $$
 ### 1.8 De Morgan's law for quantified statements
 
 $$
-Domain = {a_1, a_2, \ldots, a_n} \\
-\neg \forall P(x) \equiv \exists x \neg P(x) \\
+Domain = {a_1, a_2, \ldots, a_n}
+\\
+\neg \forall P(x) \equiv \exists x \neg P(x)
+\\
 \neg (P(a_1) \land P(a_2) \land \ldots \land P(a_n)) = \neg P(a_1) \lor \neg P(a_2) \lor \ldots \lor \neg P(a_n)
 $$
 
 - For both quantified statements, you enter the negation inside and switch the quantifier symbol.
+
+---
 
 ### 1.9 Nested Quantifiers
 
@@ -232,21 +234,25 @@ $$
 
 <img src="images/de-morgan-nested.png" alt="De Morgan Nested Quantifiers"  style="display: block; margin: 0 auto; width: 400px;"/>
 
+---
+
 ### 1.10: More Nested Quantified Statements
 
 #### Using logic to express 'everyone else'
 
-<img src="images/nested-quantifiers-example-1.png alt="De Morgan Nested Quantifiers Example 1"  style="display: block; margin: 0 auto; width: 400px;"/>
+<img src="images/nested-quantifiers-example-1.png" alt="De Morgan Nested Quantifiers Example 1"  style="display: block; margin: 0 auto; width: 400px;"/>
 
 #### Expressing uniqueness
 
-$\exists x (L(x) \land \forall y ((x \mathrel{\char`≠} y) \to \neg L(y)))$
+$\exists x (L(x) \land \forall y ((x ≠ y) \to \neg L(y)))$
 
 #### Moving quantifiers in logical statements
 
 You can move a quantifier to the beginning as long as it does not pass another quantifier.
 
 For example, $\forall x (A(x) \rightarrow \exists y M(x, y))$ is logically equivalent to $\forall x \exists y (A(x) \rightarrow M(x, y))$
+
+---
 
 ### 1.11: Logical Reasoning
 
@@ -255,10 +261,14 @@ An **argument** is a sequence of propositions, called **hypotheses**, followed b
 A **valid** argument is one where conclusion is true for every truth assignment to variables that cause the hypotheses to be true, otherwise it is **invalid**.
 
 $$
-h_1 \\
-h_2 \\
-\ldots \\
-h_{n} \\
+h_1
+\\
+h_2
+\\
+\ldots
+\\
+h_{n}
+\\
 \therefore c
 $$
 
