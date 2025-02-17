@@ -243,7 +243,7 @@ class Singleton {
 
 Anyone seeing this code for the first time might think how stupid it is to use two repeated if statements. However, let us discuss the same scenario we addressed before.
 
-We have two threads. Thread 1 accesses the method, passes from the if statement same as before, and enters the synchronized area, which is locked now from any external access. Thread 2 also passes through the first statement but waits till the first thread finishes its job in the synchronized area. After thread 1 finishes its instantiation, the second thread now is refused by the second if statement and just returns the object that was created by thread 1. Not only that, but also any future thread will immediately be refused by the first if statement. So, the delay of having to wait for every access is noe eliminated.
+We have two threads. Thread 1 accesses the method, passes from the if statement same as before, and enters the synchronized area, which is locked now from any external access. Thread 2 also passes through the first statement but waits till the first thread finishes its job in the synchronized area. After thread 1 finishes its instantiation, the second thread now is refused by the second if statement and just returns the object that was created by thread 1. Not only that, but also any future thread will immediately be refused by the first if statement. So, the delay of having to wait for every access is now eliminated.
 
 ## Other Singleton Examples
 
