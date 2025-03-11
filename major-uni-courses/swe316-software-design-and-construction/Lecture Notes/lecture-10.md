@@ -17,7 +17,7 @@
 ## Introduction
 
 Before discussing our second design pattern, let us recall the reason we are studying them in the first place.
-As you saw in the previous lecture, teh cost of reaching the 3 singleton patterns was high. 
+As you saw in the previous lecture, the cost of reaching the 3 singleton patterns was high. 
 In other words, we were deriving the design pattern step by step and saw how it took a lot of time.
 In all of these patterns, others did the same job, deriving them and thinking about them step by step.
 We are simply utilizing their efforts to have better design and ultimately better code.
@@ -218,6 +218,55 @@ class Leaf : Component {
 }
 ```
 
+Here is another code with Option 2.
+
+```C#
+// Main Parent Class
+abstract class Component {
+    protected string name;
+
+    // constructor
+    public Component(string name) {
+        this.name = name;
+    }
+
+    // Option 2
+    public abstract void Display(int depth);
+}
+
+// Composite (Folder Class)
+class Composite : Component {
+    private List<Component> _children = new List<Component>();
+
+    // constructor
+    public Composite(string name) : base(name) {} // calls parent constructor
+
+    public override void Add(Component component) {
+        _children.Add(component);
+    }
+    public override void Remove(Component component) {
+        _children.Remove(component);
+    }
+    public override void Display(int depth) {
+        Console.WriteLine(new String('-', depth) + name);
+        // displaying children
+        foreach (Component component in _children) {
+            component.Display(depth + 2);
+        }
+    }
+}
+
+// leaf class (File)
+class Leaf : Component {
+    // constructor
+    public Leaf(string name) : base(name) {}
+
+    public override void Display(int depth) {
+        Console.WriteLine(new String('-', depth) + name);
+    }
+}
+```
+
 Now, that we have our classes ready, let us build the example below in our App class.
 
 <img src="images/xomposite-example.png" alt="Composite Design Pattern Example"  style="display: block; margin: 0 auto; width: 400px;"/>
@@ -244,3 +293,7 @@ class MainApp {
     }
 }
 ```
+
+Notes:
+
+1. While subclassing both leaves and composites is perfectly valid, ensure that the essence of the design pattern is preserved: Leaves remain without children and composites continue to manage child components.
