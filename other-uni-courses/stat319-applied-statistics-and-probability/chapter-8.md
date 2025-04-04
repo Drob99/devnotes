@@ -8,7 +8,7 @@
   - [8.1: Point and Interval Estimates](#81-point-and-interval-estimates)
     - [Student-T Distribution](#student-t-distribution)
     - [Confidence Interval](#confidence-interval)
-  - [8.12: Determining the required sample size](#812-determining-the-required-sample-size)
+    - [Determining the required sample size](#determining-the-required-sample-size)
   - [Summary](#summary)
 
 ## Objectives
@@ -48,7 +48,7 @@
 
 If the population distrubution's mean is UNKNOWN and sample size is small, then we MUST assume that the population is NORMAL.
 
-## 8.12: Determining the required sample size
+### Determining the required sample size
 
 <img src="images/ch-8-img12.png" alt="Slide 19 Chapter 8" style="display: block; margin: 0 auto; width: 400px;"/>
 
