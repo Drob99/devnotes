@@ -7,6 +7,8 @@
   - [6.1: Mathematical Induction](#61-mathematical-induction)
     - [Components of an Inductive Proof](#components-of-an-inductive-proof)
     - [The Idea](#the-idea)
+  - [6.2: More Inductive Proofs](#62-more-inductive-proofs)
+  - [6.3 Strong Induction and Well-ordering](#63-strong-induction-and-well-ordering)
 
 ## 6.1: Mathematical Induction
 
@@ -26,4 +28,17 @@ The inductive step implies that it holds till infinity. Supposing that S(k) as t
 
 The base case is not necessarily 1 and could be different.
 
+## 6.2: More Inductive Proofs
 
+Induction is well-suited to prove facts about sequences defined by recurrence relations.
+
+<img src="images/ch6-img03.png" alt="Explicit Formula for sequence defined by a recurrence relation" style="display: block; margin: 0 auto; width: 400px;"/>
+
+<img src="images/ch6-img04.png" alt="Proving the explicit formula for a recurrence relation by induction" style="display: block; margin: 0 auto; width: 400px;"/>
+
+Other use cases:
+
+- Sums of arithmetic and geometric sequences
+- Set Operations
+
+## 6.3 Strong Induction and Well-ordering
