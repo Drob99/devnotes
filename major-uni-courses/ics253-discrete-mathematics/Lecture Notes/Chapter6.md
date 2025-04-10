@@ -9,6 +9,12 @@
     - [The Idea](#the-idea)
   - [6.2: More Inductive Proofs](#62-more-inductive-proofs)
   - [6.3 Strong Induction and Well-ordering](#63-strong-induction-and-well-ordering)
+    - [Strong Induction](#strong-induction)
+      - [Example](#example)
+      - [The Principle](#the-principle)
+    - [Well-Ordering](#well-ordering)
+      - [The Principle](#the-principle-1)
+  - [6.4: Recursive Definitions](#64-recursive-definitions)
 
 ## 6.1: Mathematical Induction
 
@@ -42,3 +48,23 @@ Other use cases:
 - Set Operations
 
 ## 6.3 Strong Induction and Well-ordering
+
+In strong induction, we assume that the fact to be proven holds for all values less than or equal to $k$ not just equal.
+
+### Strong Induction
+
+#### Example
+
+<img src="images/ch6-img05.png" alt="Proof by Strong Induction" style="display: block; margin: 0 auto; width: 400px;"/>
+
+#### The Principle
+
+<img src="images/ch6-img06.png" alt="The Principle of Strong Mathematical Induction" style="display: block; margin: 0 auto; width: 400px;"/>
+
+### Well-Ordering
+
+#### The Principle
+
+<img src="images/ch6-img07.png" alt="Well-ordering Principle" style="display: block; margin: 0 auto; width: 400px;"/>
+
+## 6.4: Recursive Definitions
