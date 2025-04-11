@@ -15,6 +15,11 @@
     - [Well-Ordering](#well-ordering)
       - [The Principle](#the-principle-1)
   - [6.4: Recursive Definitions](#64-recursive-definitions)
+    - [Recursively Defined Sets](#recursively-defined-sets)
+    - [Example](#example-1)
+    - [Binary String](#binary-string)
+    - [Recursive Definition of Length of Binary String](#recursive-definition-of-length-of-binary-string)
+    - [Recursive Definition for the Set of Perfect Binary Trees](#recursive-definition-for-the-set-of-perfect-binary-trees)
 
 ## 6.1: Mathematical Induction
 
@@ -68,3 +73,32 @@ In strong induction, we assume that the fact to be proven holds for all values l
 <img src="images/ch6-img07.png" alt="Well-ordering Principle" style="display: block; margin: 0 auto; width: 400px;"/>
 
 ## 6.4: Recursive Definitions
+
+In such a definition, the value of the function is defined in terms of the output value of the function on smaller input values.
+
+**Recursion** is the process of computing the value of a function using the result of the function on smaller input values.
+
+A recurrence relation is a recursive definition of a sequence.
+There can also be definitions for functions or sets. 
+By the way, a sequence is a special kind of function in which the domain is a consecutive set of integers.
+
+### Recursively Defined Sets
+
+<img src="images/ch6-img08.png" alt="Recursively Defined Sets" style="display: block; margin: 0 auto; width: 400px;"/>
+
+### Example
+
+<img src="images/ch6-img09.png" alt="Recursively Defined Set Example" style="display: block; margin: 0 auto; width: 400px;"/>
+
+### Binary String
+
+<img src="images/ch6-img10.png" alt="Binary Strings" style="display: block; margin: 0 auto; width: 400px;"/>
+
+### Recursive Definition of Length of Binary String
+
+<img src="images/ch6-img11.png" alt="Recursive Definition of Length of Binary Strings" style="display: block; margin: 0 auto; width: 400px;"/>
+
+### Recursive Definition for the Set of Perfect Binary Trees
+
+<img src="images/ch6-img12.png" alt="Perfect Binary Trees" style="display: block; margin: 0 auto; width: 400px;"/>
+
