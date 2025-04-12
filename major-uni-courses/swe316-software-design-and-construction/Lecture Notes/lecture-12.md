@@ -101,7 +101,7 @@ class Context {
 
     // constructor
     public Context (State state){
-        this.State = state;
+        this._state = state;
     }
 
     // getter and setter in C#. Don't worry about the syntax
@@ -147,7 +147,7 @@ Note the "No Quarter" state and the Gumball Machine as an example below
 
 ```java
 public class NoQuarterState implements State {
-    GumballMachine gumballMachine; // This is circular reference and bad practice actually. It should have been in the parent better.
+    GumballMachine gumballMachine; // This is circular reference and bad practice actually. It should have been in the parent usually. In this particular example, it is a necessary drawback. 
 
     public NoQuarterState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
