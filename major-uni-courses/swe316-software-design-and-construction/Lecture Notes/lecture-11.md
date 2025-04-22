@@ -131,10 +131,10 @@ public class CoffeeShop {
         beverage2 = new Vanilla(beverage2);
         System.out.println(beverage2.getDescription() + " $" + beverage2.cost());
 
-        // At this moment, beverage2 is an instanceof Vanilla ONLY.
+        // At this moment, beverage2 is an instanceof Vanilla in the eyes of the virtual machine
 
         // If we want to remove the Vanilla shot. Maybe, the customer did not want it anymore.
-        beverage2 = beverage2.beverage; // Quite elegant!
+        beverage2 = (Vanilla) beverage2.beverage; // Quite elegant! Assuming Vanilla class has a beverage private variable.
     }
 }
 ```
