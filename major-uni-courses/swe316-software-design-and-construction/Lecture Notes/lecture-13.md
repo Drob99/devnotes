@@ -111,7 +111,7 @@ Now, no if statements exist anymore.
 
 Did you figure out the difference with State?
 
-Notice that a strategy has No reference to the context at all. The border does not know what component will use it. In State, the context is aware and there's circular reference if you remember.
+Notice that a strategy has No reference to the context at all. The border does not know what component will use it. In State, the states are aware of the context and there's circular reference if you remember.
 
 Another very important difference is that states know about each other. Strategies have no link between themselves.
 
