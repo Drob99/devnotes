@@ -241,10 +241,10 @@ class Composite : Component {
     // constructor
     public Composite(string name) : base(name) {} // calls parent constructor
 
-    public override void Add(Component component) {
+    public void Add(Component component) {
         _children.Add(component);
     }
-    public override void Remove(Component component) {
+    public void Remove(Component component) {
         _children.Remove(component);
     }
     public override void Display(int depth) {
@@ -273,6 +273,7 @@ Now, that we have our classes ready, let us build the example below in our App c
 
 ```C#
 class MainApp {
+    // Note that this uses Option 1. If we are placing the child operations in the Composite class then we will need to cast before adding or removing.
     static void Main() {
         Composite root = new Composite("root");
         root.Add(new Leaf("Leaf A"));
